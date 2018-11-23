@@ -10,7 +10,7 @@ function getExclamationMarks(numChars: number) {
     return Array(numChars + 1).join('!');
   }
 
-  function Hello ({ name , level = 1 }:Props) {
+  export function Hello ({ name , level = 1 }:Props) {
     if(level <= 0){
         throw new Error('牛逼了')
     }
@@ -20,4 +20,3 @@ function getExclamationMarks(numChars: number) {
         </div>
     )
 }
-export default Hello
