@@ -5,7 +5,6 @@ import { StoreState } from '../types/index';
 import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from '../constants/index';
 
 export function enthusiasm(state: StoreState, action: EnthusiasmAction): StoreState {
-    console.log('action',action,state)
   switch (action.type) {
     case INCREMENT_ENTHUSIASM:
       return { ...state, level: state.level + 1 };

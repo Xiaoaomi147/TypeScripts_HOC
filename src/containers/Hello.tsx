@@ -1,7 +1,7 @@
 // src/containers/Hello.tsx
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import Hello from '../components/hello2';
+import {Hello2} from '../components/hello2';
 import * as actions from '../actions';
 import { StoreState } from '../types/index';
 
@@ -19,4 +19,4 @@ export function mapDispatchToProps(dispatch: Dispatch<actions.EnthusiasmAction>)
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hello);
+export default connect(mapStateToProps, mapDispatchToProps)(Hello2);

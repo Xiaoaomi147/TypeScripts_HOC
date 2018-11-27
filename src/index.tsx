@@ -6,7 +6,6 @@ import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import { enthusiasm } from './reducers/index';
-
 const store:Store<any> = createStore(enthusiasm ,{
   level: 1,
   name: 'TypeScript',

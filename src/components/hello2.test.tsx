@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import { Hello2 } from './index'
+import { Hello2 } from './hello2'
 
 it('renders the correct text when no enthusiasm level is given', () => {
   const hello = enzyme.shallow(<Hello2 name='Daniel' />);

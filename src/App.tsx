@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './App.css';
-import { Hello, Hello2, Header } from './components/index'
+import { Hello, Header } from './components/index'
+import Hello2 from './containers/Hello'
 
 class App extends React.Component {
   public render() {
