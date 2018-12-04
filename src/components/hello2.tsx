@@ -7,6 +7,8 @@
  */
 
 import * as React from 'react';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
 function getExclamationMarks(numChars: number) {
     return Array(numChars + 1).join('!');
 }
@@ -26,11 +28,13 @@ export class Hello2 extends React.Component<Props, State> {
             throw new Error('You could be a little more enthusiastic. :D');
         }
         return (
-            <div>
+            <>
+                <CssBaseline />
                 {`Hello ${name + getExclamationMarks(level)}`}
-                <button onClick={onIncrement}>+</button>
-                <button onClick={onDecrement}>-</button>
-            </div>
+                <Button variant="contained" color="primary" onClick={onIncrement}>+</Button>
+                <Button variant="contained" color="primary" onClick={onDecrement}>-</Button>
+                
+            </>
         )
     }
 

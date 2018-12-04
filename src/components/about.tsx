@@ -2,6 +2,6 @@ import * as React from 'react';
 
 export const Header:React.StatelessComponent<{}> = ()=> {
     return (
-        <div>哈哈哈你好TypeScripts</div>
+        <div>你好TypeScripts</div>
     )
 }

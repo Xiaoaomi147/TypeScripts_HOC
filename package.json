@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.6.1",
+    "@material-ui/icons": "^3.0.1",
     "@types/react-redux": "^6.0.10",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -12,9 +14,9 @@
     "redux": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
+    "start": "react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
@@ -27,6 +29,9 @@
     "@types/redux-logger": "^3.0.6",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
+    "react-app-rewire-scss": "^1.0.2",
+    "react-app-rewired": "^1.6.2",
+    "ts-import-plugin": "^1.5.5",
     "typescript": "^3.1.6"
   }
 }

@@ -1,0 +1,32 @@
+
+$lte7:true !default;
+
+@mixin center-block {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    @if $lte7 {
+        *display: inline; *zoom:1
+    }
+}
+
+@mixin float($float:left,$bg:#e6e6e6) {
+    float: $float;
+    background: $bg;
+    @if $lte7 {
+        display: inline;
+    }
+}
+
+@mixin screen ( $res-min, $res-max ){
+    @media screen and ( min-width: $res-min ) and ( max-width: $res-max ) {
+        @content;
+    }
+}
+
+@mixin keyframes( $name ) {
+    @keyframes #{ $name } {
+        @content;
+    }
+}
+
