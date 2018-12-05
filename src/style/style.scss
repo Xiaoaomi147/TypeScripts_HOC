@@ -2,11 +2,11 @@
 
 .ml {
     width: 100px;
-    @extend %center-block;
+    @include center-block;
 }
 .mr {
-    width: 600px;
-    @extend %center-block;
+    width: 601px;
+    @include center-block;
 }
 .kb {
     @include keyframes(show){
