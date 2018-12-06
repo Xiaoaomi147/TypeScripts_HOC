@@ -12,7 +12,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 function getExclamationMarks(numChars: number) {
     return Array(numChars + 1).join('!');
 }
-interface Props {
+export interface IPros {
     name?: string;
     level?: number;
     onIncrement?: () => void;
@@ -21,7 +21,7 @@ interface Props {
 interface State {
     item: number;
 }
-export class Hello2 extends React.Component<Props, State> {
+export class Hello2 extends React.Component<IPros, State> {
     
     public render(): JSX.Element {
             const { name, onIncrement, onDecrement, level = 1 } = this.props;

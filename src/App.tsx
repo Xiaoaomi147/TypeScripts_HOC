@@ -1,21 +1,27 @@
 
 import * as React from 'react';
-
-
-import { Hello, Header, Dome, Loader } from './components/index'
+import {History} from 'history';
+import { ConnectedRouter } from 'connected-react-router'
+import {Route, Switch} from 'react-router-dom';
 import Hello2 from './containers/Hello'
 import './App.scss';
 import './style/style.scss'
-class App extends React.Component {
+
+interface Iprops {
+  history: History;
+}
+interface IState {}
+class App extends React.Component< Iprops, IState > {
   public render() {
     return (
-      <div className="App">
-       <Header/>
-        <Hello name="TypeScript" level={1}/>
-        <Hello2 />
-        <Dome />
-        <Loader />
-      </div>
+      <ConnectedRouter history={this.props.history}>
+        <div className="App">
+          <Hello2 />
+          <Switch>
+
+          </Switch>
+        </div>
+      </ConnectedRouter>
     );
   }
 }
