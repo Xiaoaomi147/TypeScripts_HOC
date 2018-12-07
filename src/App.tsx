@@ -1,27 +1,39 @@
 
 import * as React from 'react';
+import { createBrowserHistory} from 'history';
+import {Route, Switch, Router} from 'react-router-dom';
+import {ConnectedRouter} from 'connected-react-router';
 import {History} from 'history';
-import { ConnectedRouter } from 'connected-react-router'
-import {Route, Switch} from 'react-router-dom';
+import routerconfig from './RouterConfig';
 import Hello2 from './containers/Hello'
 import './App.scss';
 import './style/style.scss'
 
-interface Iprops {
-  history: History;
+export interface Iprops {
+  history: History
 }
 interface IState {}
 class App extends React.Component< Iprops, IState > {
   public render() {
+    const { history } = this.props
     return (
-      <ConnectedRouter history={this.props.history}>
+      <ConnectedRouter history={ history }>
         <div className="App">
           <Hello2 />
-          <Switch>
-
-          </Switch>
+          <Router history={ createBrowserHistory() }>
+            <Switch>
+              {routerconfig.map((item, index) => (
+                  <Route
+                    key={index}
+                    path={item.path}
+                    component={item.component}
+                    exact
+                  />
+                ))}
+            </Switch>
+          </Router>
         </div>
-      </ConnectedRouter>
+        </ConnectedRouter>
     );
   }
 }
