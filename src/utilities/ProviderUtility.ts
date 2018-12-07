@@ -3,6 +3,7 @@ import {routerMiddleware} from 'connected-react-router';
 import {History} from 'history';
 import rootReducer from '../stores/rootReducer';
 import IStore from '../stores/IStore';
+import logger from '../components/logger-middleware'
 
 export default class ProviderUtility {
 
@@ -11,7 +12,8 @@ export default class ProviderUtility {
             rootReducer(history),
             initialState,
                 applyMiddleware(
-                    routerMiddleware(history)
+                    routerMiddleware(history),
+                    logger
                 ),
         );
 

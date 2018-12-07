@@ -1,5 +1,7 @@
 import  './Home.module.scss';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import RouteEnum from '../../constants/RouteEnum'
 
 export interface IProps {}
 interface IState {}
@@ -11,9 +13,7 @@ export default class Home extends React.Component < IProps, IState >{
         public render(): JSX.Element {
             return (
                 <>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
+                    <div>< Link to={ RouteEnum.Login }>Go To Login</Link></div>
                 </>
             )
         }

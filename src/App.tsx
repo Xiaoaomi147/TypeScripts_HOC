@@ -1,11 +1,10 @@
 
-import * as React from 'react';
+import React from 'react';
 import { createBrowserHistory} from 'history';
 import {Route, Switch, Router} from 'react-router-dom';
 import {ConnectedRouter} from 'connected-react-router';
 import {History} from 'history';
 import routerconfig from './RouterConfig';
-import Hello2 from './containers/Hello'
 import './App.scss';
 import './style/style.scss'
 
@@ -19,7 +18,6 @@ class App extends React.Component< Iprops, IState > {
     return (
       <ConnectedRouter history={ history }>
         <div className="App">
-          <Hello2 />
           <Router history={ createBrowserHistory() }>
             <Switch>
               {routerconfig.map((item, index) => (
