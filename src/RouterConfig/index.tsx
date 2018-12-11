@@ -1,9 +1,10 @@
-import * as Loadable  from 'react-loadable';
-import AsyncLoader from '../components/AsyncLoader'
-import { IPros } from '../components/hello2'
-const loadableOptions: LoadableExport.OptionsWithoutRender< IPros > = {
-    loader: () => import('../components/hello2'),
-    loading: AsyncLoader,
-};
-
-export default Loadable(loadableOptions)
+import Home from '../router/home/HomeAsync';
+import Login from '../router/login/LoginAsync';
+export default [
+    {
+        path:'/',
+        component:Home
+    },{
+        path:'/login',
+        component:Login
+    }]

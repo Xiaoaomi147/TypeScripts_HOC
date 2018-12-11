@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import { Loader } from './loader';
 
 interface IProps {}
 interface IState {}
@@ -11,7 +12,7 @@ export default class AsyncLoader extends React.Component<IProps & LoadableExport
         } else if (this.props.timedOut) {
             return <h2>Taking longer than expected... <button onClick={this.props.retry}>Retry</button></h2>;
         } else if (this.props.pastDelay) {
-            return <h2>Loading...</h2>;
+            return <Loader />;
         } else {
             return null;
         }
