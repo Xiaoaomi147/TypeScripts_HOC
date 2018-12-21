@@ -1,5 +1,6 @@
 import Home from '../router/home/HomeAsync';
 import Login from '../router/login/LoginAsync';
+import Jsl from '../router/jsl/jslAsync';
 export default [
     {
         path:'/',
@@ -7,4 +8,7 @@ export default [
     },{
         path:'/login',
         component:Login
-    }]
+    },{
+        path:'/jsl',
+        component:Jsl
+    },]

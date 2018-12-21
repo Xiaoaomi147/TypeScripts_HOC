@@ -1,6 +1,7 @@
 enum RouteEnum {
-    Home = '/',
+    Home  = '/',
     Login = '/login',
+    JSL   = '/jsl'
 }
 
 export default RouteEnum;

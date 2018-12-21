@@ -1,21 +1,24 @@
 import  './Home.module.scss';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import RouteEnum from '../../constants/RouteEnum'
+import RouteEnum from '../../constants/RouteEnum';
 
 export interface IProps {}
-interface IState {}
 
-export default class Home extends React.Component < IProps, IState >{
-        /**
-         * name
-         */
-        public render(): JSX.Element {
-            return (
-                <>
-                    <div>< Link to={ RouteEnum.Login }>Go To Login</Link></div>
-                </>
-            )
-        }
+export default function Home( props:IProps ) {
+
+    const [name, setName] = useState('shifan');
+
+    function handleNameChange( e:any ) {
+        setName(e.target.value);
+        console.log('name', e.target.value)
+    }
+    return (
+        <>
+            <div>< Link to={ RouteEnum.Login }>{name}</Link></div>
+            <input onChange={ handleNameChange }></input>
+            {/* <input value={ name } /> */}
+        </>
+    )
 }
 
