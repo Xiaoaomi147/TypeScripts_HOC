@@ -1,15 +1,15 @@
 $bgColors:  #29C06D #F9497A #29C06D #29C06D #88BFFB #88BFFB #29C06D #88BFFB #F9497A #F9497A #F9497A #88BFFB #F9497A #F9497A #88BFFB #88BFFB #29C06D #88BFFB #29C06D  #29C06D ;
 .testWarp{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: white;
     .testGrid{
         display: grid;
         border: 2px solid black;
-        padding: 10px 20px;
+        padding: 1rem 2rem;
         height: 90%;
         width: 90%;
-        margin: 10px auto;
+        margin: 1rem auto;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: height times 0.2;
         grid-gap: 10px;
@@ -17,14 +17,14 @@ $bgColors:  #29C06D #F9497A #29C06D #29C06D #88BFFB #88BFFB #29C06D #88BFFB #F94
             display: grid;
             align-items: center;
             position: relative;
-            font-size: 12px;
+            font-size: 1.2rem;
             background: white;
-            border-radius: 5px;
+            border-radius: 0.5rem;
             justify-content: center;
             & > p {
                 position: absolute;
-                left: 5px;
-                top:0px;
+                left: 0.5rem;
+                top: 0rem;
                 margin-block-start: 0;
                 margin-block-end: 0;
             }

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/cisystem/.yarn/bin/yarn.js add @types/react 16.7.6 -D
+  /usr/local/bin/node /Users/cisystem/.yarn/bin/yarn.js info @type/classnames
 
 PATH: 
   /Users/cisystem/.yarn/bin:/Users/cisystem/.config/yarn/global/node_modules/.bin:/Users/cisystem/importgo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/cisystem/.yarn/bin:/Users/cisystem/.config/yarn/global/node_modules/.bin:/Users/cisystem/importgo/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/16.7.6: Not found
+  Error: https://registry.npm.taobao.org/@type%2fclassnames: Not found
       at Request.params.callback [as _callback] (/Users/cisystem/.yarn/lib/cli.js:65327:18)
       at Request.self.callback (/Users/cisystem/.yarn/lib/cli.js:133155:22)
       at emitTwo (events.js:126:13)
@@ -34,10 +34,13 @@ npm manifest:
     "dependencies": {
       "@material-ui/core": "^3.6.1",
       "@material-ui/icons": "^3.0.1",
+      "classnames": "^2.2.6",
       "connected-react-router": "^5.0.1",
       "history": "^4.7.2",
-      "react": "^16.7.0-alpha.2",
-      "react-dom": "^16.7.0-alpha.2",
+      "react": "16.7.0-alpha.0",
+      "react-container-query": "^0.11.0",
+      "react-document-title": "^2.0.3",
+      "react-dom": "16.7.0-alpha.0",
       "react-hot-loader": "^4.3.12",
       "react-loadable": "^5.5.0",
       "react-redux": "^5.1.1",
@@ -58,6 +61,8 @@ npm manifest:
       "@types/history": "^4.7.2",
       "@types/jest": "^23.3.9",
       "@types/node": "^10.12.10",
+      "@types/react": "16.7.6",
+      "@types/react-dom": "16.0.9",
       "@types/react-loadable": "^5.4.2",
       "@types/react-redux": "^6.0.10",
       "@types/react-router-dom": "^4.3.1",
@@ -216,6 +221,13 @@ Lockfile:
     version "15.5.6"
     resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   
+  "@types/react-dom@16.0.9":
+    version "16.0.9"
+    resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.9.tgz#73ceb7abe6703822eab6600e65c5c52efd07fb91"
+    dependencies:
+      "@types/node" "*"
+      "@types/react" "*"
+  
   "@types/react-loadable@^5.4.2":
     version "5.4.2"
     resolved "http://registry.npm.taobao.org/@types/react-loadable/download/@types/react-loadable-5.4.2.tgz#087ead218ee0494c44e41fbdec7477b0ea4b7c86"
@@ -251,7 +263,7 @@ Lockfile:
     dependencies:
       "@types/react" "*"
   
-  "@types/react@*":
+  "@types/react@*", "@types/react@16.7.6":
     version "16.7.6"
     resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.7.6.tgz#80e4bab0d0731ad3ae51f320c4b08bdca5f03040"
     dependencies:
@@ -1294,6 +1306,10 @@ Lockfile:
       mixin-deep "^1.2.0"
       pascalcase "^0.1.1"
   
+  batch-processor@^1.0.0:
+    version "1.0.0"
+    resolved "http://registry.npm.taobao.org/batch-processor/download/batch-processor-1.0.0.tgz#75c95c32b748e0850d10c2b168f6bdbe9891ace8"
+  
   batch@0.6.1:
     version "0.6.1"
     resolved "http://registry.npm.taobao.org/batch/download/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -1730,7 +1746,7 @@ Lockfile:
       isobject "^3.0.0"
       static-extend "^0.1.1"
   
-  classnames@^2.2.5:
+  classnames@^2.2.5, classnames@^2.2.6:
     version "2.2.6"
     resolved "http://registry.npm.taobao.org/classnames/download/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   
@@ -1948,6 +1964,10 @@ Lockfile:
   constants-browserify@^1.0.0:
     version "1.0.0"
     resolved "http://registry.npm.taobao.org/constants-browserify/download/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
+  
+  container-query-toolkit@0.1.3:
+    version "0.1.3"
+    resolved "http://registry.npm.taobao.org/container-query-toolkit/download/container-query-toolkit-0.1.3.tgz#79ece9fe491d9187b7051247067f1faac6ce00b0"
   
   content-disposition@0.5.2:
     version "0.5.2"
@@ -2565,6 +2585,12 @@ Lockfile:
     version "1.3.88"
     resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.88.tgz#f36ab32634f49ef2b0fdc1e82e2d1cc17feb29e7"
   
+  element-resize-detector@1.1.13:
+    version "1.1.13"
+    resolved "http://registry.npm.taobao.org/element-resize-detector/download/element-resize-detector-1.1.13.tgz#f61907e98a91b1ad215f92790bc15113df68444d"
+    dependencies:
+      batch-processor "^1.0.0"
+  
   elliptic@^6.0.0:
     version "6.4.1"
     resolved "http://registry.npm.taobao.org/elliptic/download/elliptic-6.4.1.tgz#c2d0b7776911b86722c632c3c06c60f2f819939a"
@@ -2845,6 +2871,10 @@ Lockfile:
       p-finally "^1.0.0"
       signal-exit "^3.0.0"
       strip-eof "^1.0.0"
+  
+  exenv@^1.2.1:
+    version "1.2.2"
+    resolved "http://registry.npm.taobao.org/exenv/download/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
   
   expand-brackets@^0.1.4:
     version "0.1.5"
@@ -6321,7 +6351,7 @@ Lockfile:
     dependencies:
       asap "~2.0.3"
   
-  prop-types@^15.5.0, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
+  prop-types@^15.5.0, prop-types@^15.5.6, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
     version "15.6.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
     dependencies:
@@ -6492,6 +6522,13 @@ Lockfile:
       cross-spawn "^5.1.0"
       dotenv "^4.0.0"
   
+  react-container-query@^0.11.0:
+    version "0.11.0"
+    resolved "http://registry.npm.taobao.org/react-container-query/download/react-container-query-0.11.0.tgz#b07ac2794612499dd8f2d1759b72e9c415e53567"
+    dependencies:
+      container-query-toolkit "0.1.3"
+      resize-observer-lite "0.2.3"
+  
   react-dev-utils@^5.0.2:
     version "5.0.3"
     resolved "http://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-5.0.3.tgz#92f97668f03deb09d7fa11ea288832a8c756e35e"
@@ -6515,14 +6552,21 @@ Lockfile:
       strip-ansi "3.0.1"
       text-table "0.2.0"
   
-  react-dom@^16.7.0-alpha.2:
-    version "16.7.0-alpha.2"
-    resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.7.0-alpha.2.tgz#16632880ed43676315991d8b412cce6975a30282"
+  react-document-title@^2.0.3:
+    version "2.0.3"
+    resolved "http://registry.npm.taobao.org/react-document-title/download/react-document-title-2.0.3.tgz#bbf922a0d71412fc948245e4283b2412df70f2b9"
+    dependencies:
+      prop-types "^15.5.6"
+      react-side-effect "^1.0.2"
+  
+  react-dom@16.7.0-alpha.0:
+    version "16.7.0-alpha.0"
+    resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.7.0-alpha.0.tgz#8379158d4c76d63c989f325f45dfa5762582584f"
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
       prop-types "^15.6.2"
-      scheduler "^0.12.0-alpha.2"
+      scheduler "^0.11.0-alpha.0"
   
   react-error-overlay@^4.0.1:
     version "4.0.1"
@@ -6640,6 +6684,13 @@ Lockfile:
     optionalDependencies:
       fsevents "^1.1.3"
   
+  react-side-effect@^1.0.2:
+    version "1.1.5"
+    resolved "http://registry.npm.taobao.org/react-side-effect/download/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
+    dependencies:
+      exenv "^1.2.1"
+      shallowequal "^1.0.1"
+  
   react-test-renderer@^16.0.0-0, react-test-renderer@^16.6.3:
     version "16.6.3"
     resolved "http://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.6.3.tgz#5f3a1a7d5c3379d46f7052b848b4b72e47c89f38"
@@ -6658,14 +6709,14 @@ Lockfile:
       prop-types "^15.6.2"
       react-lifecycles-compat "^3.0.4"
   
-  react@^16.7.0-alpha.2:
-    version "16.7.0-alpha.2"
-    resolved "http://registry.npm.taobao.org/react/download/react-16.7.0-alpha.2.tgz#924f2ae843a46ea82d104a8def7a599fbf2c78ce"
+  react@16.7.0-alpha.0:
+    version "16.7.0-alpha.0"
+    resolved "http://registry.npm.taobao.org/react/download/react-16.7.0-alpha.0.tgz#e2ed4abe6f268c9b092a1d1e572953684d1783a9"
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
       prop-types "^15.6.2"
-      scheduler "^0.12.0-alpha.2"
+      scheduler "^0.11.0-alpha.0"
   
   read-pkg-up@^1.0.1:
     version "1.0.1"
@@ -6958,6 +7009,12 @@ Lockfile:
     version "1.0.0"
     resolved "http://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   
+  resize-observer-lite@0.2.3:
+    version "0.2.3"
+    resolved "http://registry.npm.taobao.org/resize-observer-lite/download/resize-observer-lite-0.2.3.tgz#b557f378e2ce9b9aab1dc71a91047bd7ed1d8915"
+    dependencies:
+      element-resize-detector "1.1.13"
+  
   resolve-cwd@^2.0.0:
     version "2.0.0"
     resolved "http://registry.npm.taobao.org/resolve-cwd/download/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -7108,16 +7165,9 @@ Lockfile:
     version "1.2.4"
     resolved "http://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   
-  scheduler@^0.11.2:
+  scheduler@^0.11.0-alpha.0, scheduler@^0.11.2:
     version "0.11.3"
     resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.11.3.tgz#b5769b90cf8b1464f3f3cfcafe8e3cd7555a2d6b"
-    dependencies:
-      loose-envify "^1.1.0"
-      object-assign "^4.1.1"
-  
-  scheduler@^0.12.0-alpha.2:
-    version "0.12.0-alpha.3"
-    resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.12.0-alpha.3.tgz#59afcaba1cb79e3e8bee91de94eb8f42c9152c2b"
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
@@ -7262,7 +7312,7 @@ Lockfile:
       kind-of "^5.0.0"
       mixin-object "^2.0.1"
   
-  shallowequal@^1.0.2:
+  shallowequal@^1.0.1, shallowequal@^1.0.2:
     version "1.1.0"
     resolved "http://registry.npm.taobao.org/shallowequal/download/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   

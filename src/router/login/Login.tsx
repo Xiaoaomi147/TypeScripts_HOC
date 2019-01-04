@@ -1,26 +1,37 @@
 import  './Login.module.scss';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  } from 'react-router-dom';
+import {History} from 'history';
 import RouteEnum from '../../constants/RouteEnum'
 
-export interface IProps {}
+export interface IProps {
+    history:History
+}
 export interface IState {}
 
 export default class Login extends React.Component< IProps, IState >{
-
+    login = () => {
+    localStorage.setItem('isLogin',JSON.stringify(true));
+    this.props.history.push({ pathname: RouteEnum.Home });
+    }
     /**
      * name
      */
     public render(): JSX.Element {
         return (
             <>
-                <figure>
+                <figure className='Login'>
                     <div> 你好啊！ Sir </div>
-                    {/* <p>你好啊</p> */}
+                    {/* <Prompt
+                    when={false}
+                    message={location => (
+                        `Are you sure you want to go to ${location.pathname}`
+                    )}
+                /> */}
                     <div className='span_a'>
-                        <Link to={RouteEnum.Home}> 登录 </Link>
-                        <Link to={RouteEnum.JSL}> HOOKS </Link>
+                        <button style={{ cursor: 'pointer' }} onClick={this.login}> 登 录 </button>
+                        
                     </div>
                     <img className='span_img' width="350" height="234" />
                     
