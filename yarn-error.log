@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/cisystem/.yarn/bin/yarn.js info @type/classnames
+  /usr/local/bin/node /Users/cisystem/.yarn/bin/yarn.js info @types/react-media
 
 PATH: 
   /Users/cisystem/.yarn/bin:/Users/cisystem/.config/yarn/global/node_modules/.bin:/Users/cisystem/importgo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/cisystem/.yarn/bin:/Users/cisystem/.config/yarn/global/node_modules/.bin:/Users/cisystem/importgo/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/@type%2fclassnames: Not found
+  Error: https://registry.npm.taobao.org/@types%2freact-media: Not found
       at Request.params.callback [as _callback] (/Users/cisystem/.yarn/lib/cli.js:65327:18)
       at Request.self.callback (/Users/cisystem/.yarn/lib/cli.js:133155:22)
       at emitTwo (events.js:126:13)
@@ -56,12 +56,14 @@ npm manifest:
       "eject": "react-scripts-ts eject"
     },
     "devDependencies": {
+      "@types/classnames": "^2.2.6",
       "@types/enzyme": "^3.1.15",
       "@types/enzyme-adapter-react-16": "^1.0.3",
       "@types/history": "^4.7.2",
       "@types/jest": "^23.3.9",
       "@types/node": "^10.12.10",
       "@types/react": "16.7.6",
+      "@types/react-document-title": "^2.0.3",
       "@types/react-dom": "16.0.9",
       "@types/react-loadable": "^5.4.2",
       "@types/react-redux": "^6.0.10",
@@ -177,6 +179,10 @@ Lockfile:
     version "0.22.9"
     resolved "http://registry.npm.taobao.org/@types/cheerio/download/@types/cheerio-0.22.9.tgz#b5990152604c2ada749b7f88cab3476f21f39d7b"
   
+  "@types/classnames@^2.2.6":
+    version "2.2.6"
+    resolved "http://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.6.tgz#dbe8a666156d556ed018e15a4c65f08937c3f628"
+  
   "@types/enzyme-adapter-react-16@^1.0.3":
     version "1.0.3"
     resolved "http://registry.npm.taobao.org/@types/enzyme-adapter-react-16/download/@types/enzyme-adapter-react-16-1.0.3.tgz#0cf7025b036694ca8d596fe38f24162e7117acf1"
@@ -220,6 +226,12 @@ Lockfile:
   "@types/prop-types@*":
     version "15.5.6"
     resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
+  
+  "@types/react-document-title@^2.0.3":
+    version "2.0.3"
+    resolved "http://registry.npm.taobao.org/@types/react-document-title/download/@types/react-document-title-2.0.3.tgz#32d0b3d0d36a9041d13b01106c64309388a0153a"
+    dependencies:
+      "@types/react" "*"
   
   "@types/react-dom@16.0.9":
     version "16.0.9"

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Media from 'react-media';
 import { Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { History } from 'history';
@@ -21,7 +22,9 @@ class App extends React.Component< Iprops > {
       <ConnectedRouter history={ history }>
                 <Switch>
                   <ErrorBoundaryRoute path='/login' component={ Login } />
-                  <BasicLayout history={ history }/>
+                  <Media query="(max-width: 599px)">
+                    { isMobile => <BasicLayout history={ history } isMobile={isMobile} />}
+                    </Media>)
                 </Switch>
       </ConnectedRouter>
     );

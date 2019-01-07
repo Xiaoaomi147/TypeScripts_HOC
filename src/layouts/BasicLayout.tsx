@@ -23,6 +23,10 @@ interface PrivateRouteProps{
 }
 interface BasicLayoutProps{
   history: History,
+  isMobile: Boolean,
+}
+interface IState {
+  Collapse: Boolean
 }
 
 const query = {
@@ -50,12 +54,12 @@ const query = {
   },
 };
 
-class PrivateRoute extends React.Component <PrivateRouteProps> {
-
+class PrivateRoute extends React.Component < PrivateRouteProps> {
+  
   public render() {
     const { path, history } = this.props
     const isLogin = JSON.parse(localStorage.getItem('isLogin')) || false
-      console.log(history);
+      console.log('wqwqwq',history);
       if (isLogin) {
           return (
               <ErrorBoundaryRoute path={path} component={Home} />
@@ -68,40 +72,42 @@ class PrivateRoute extends React.Component <PrivateRouteProps> {
   }
 }
 
-class BasicLayout extends React.Component <BasicLayoutProps> {
+class BasicLayout extends React.Component <BasicLayoutProps, IState> {
+  state: IState = { Collapse: true }
   getPageTitle() {
-    // const { routerData, location } = this.props;
-    // const { pathname } = location;
     let title = 'hehe';
-    // let currRouterData = null;
-    // // match params path
-    // Object.keys(routerData).forEach(key => {
-    //   if (pathToRegexp(key).test(pathname)) {
-    //     currRouterData = routerData[key];
-    //   }
-    // });
-    // if (currRouterData && currRouterData.name) {
-    //   title = `${currRouterData.name} - Ant Design Pro`;
-    // }
     return title;
   }
   loginOut=()=>{
     window.localStorage.setItem('isLogin',JSON.stringify(false));
 }
+Collapse = () => {
+  const { Collapse } = this.state
+  this.setState({
+    Collapse: !Collapse
+  })
+}
   public render() {
-    const { history } = this.props
-
+    const { history, isMobile } = this.props
+    const { Collapse } = this.state
+    console.log('isMobile',isMobile)
     const layout = (
       <div className="BasicLayout">
             <div style={{display:'flex'}}>
+            { Collapse && isMobile 
+            ?
+            null 
+            : (
                 <div className='side'>
                   <ul>
                     <li><Link to={RouteEnum.Login} onClick={this.loginOut}>登出</Link></li>
                     <li><Link to={RouteEnum.JSL}> HOOKS </Link></li>
                   </ul>
                 </div>
+                )
+            }
                 <div style={{flex: 1, minHeight: '100vh'}}>
-                <div className='heaerd'> 1111</div>
+                <div className='heaerd'> <button onClick={ this.Collapse } style={{ cursor: 'pointer' }}> 打开 or 关闭 </button></div>
                   <ErrorBoundary>
                     <Switch>
                       {routerconfig.map((item, index) => (
