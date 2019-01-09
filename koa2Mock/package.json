@@ -1,0 +1,22 @@
+{
+  "name": "Koa2Mock",
+  "version": "1.0.0",
+  "description": "shifan",
+  "main": "app.js",
+  "author": "shifan",
+  "license": "3000",
+  "private": false,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^2.4.2",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.10.1",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0",
+    "mongoose": "^5.4.2",
+    "require-directory": "^2.1.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,40 @@
+{
+  "CWRNo": "CWR16061660",
+  "HKID": null,
+  "Passport": null,
+  "Sex": null,
+  "ExpiryDate": "2019-11-21",
+  "IssueDate": "2016-11-22",
+  "DateOfBirth": null,
+  "YearOfBirth": null,
+  "NameChi": "陳珊珊",
+  "NameEng": "Chan Shan Shan",
+  "Photo": null,
+  "Version": "1",
+  "GreenCardAlignment": null,
+  "IsGreenCardAsOtherQualification": "",
+  "PrintCount": 0,
+  "LastModifyDate": "2016-11-22 05:03:40",
+  "NormalTrades": [
+    {
+      "AuthorityCode": "024",
+      "AuthorityNameChi": "建造業議會",
+      "AuthorityNameEng": "Construction Industry Council",
+      "TradeCode": "GREEN",
+      "TradeNameChi": "強制性基本安全訓練課程(平安咭)",
+      "TradeNameEng": "Mandatory Basic Safety Training Course(Green Card)",
+      "IssueDate": "",
+      "ExpiryDate": "2019-11-21",
+      "IsPrincipal": "False",
+      "ReferenceNo": "SCW03186031",
+      "Qualification": 1,
+      "Class": "",
+      "PrintOrder": 0,
+      "SkillLevel": "1",
+      "SkillLevelDesc": "General Worker",
+      "SkillLevelChiDesc": "普通工人"
+    }
+  ],
+  "ProvisionalTrades": [],
+  "OtherQualifications": []
+}

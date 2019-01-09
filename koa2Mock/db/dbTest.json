@@ -1,0 +1,57 @@
+[
+  {
+    "_id": "5a070833c6b3d226e3fd3eb4",
+    "type": "DSC",
+    "nameChi": "永光鋼鐵工程有限公司",
+    "nameEng": "",
+    "srsNum": null,
+    "scCode": null,
+    "srsRenewalNum": null,
+    "srsExpiryDate": "1969-12-31T16:00:00.000Z",
+    "srsApplDate": "1969-12-31T16:00:00.000Z",
+    "brNum": null,
+    "tiers": 1,
+    "companyId": "593be6d3c4efec0018d5f4f0",
+    "crUser": "CKHui@re-bar.com.hk",
+    "upUser": "JasonLi",
+    "trade": [
+      {
+        "nameChi": "扎鐵",
+        "nameEng": "Bar Bender and Fixer",
+        "_id": "5b3eafc8915a83000f009ff5",
+        "id": "5b3eafc8915a83000f009ff5"
+      }
+    ],
+    "crTime": null,
+    "upTime": null,
+    "id": "5a070833c6b3d226e3fd3eb4"
+  },
+  {
+    "_id": "5b174c95875790000e2ca658",
+    "type": "DSC",
+    "__v": 0,
+    "nameChi": "Cisystem",
+    "nameEng": null,
+    "srsNum": null,
+    "scCode": "",
+    "srsRenewalNum": null,
+    "srsExpiryDate": "2027-12-31T16:00:00.000Z",
+    "srsApplDate": "2027-12-31T16:00:00.000Z",
+    "brNum": null,
+    "tiers": null,
+    "companyId": "593be6d3c4efec0018d5f4f0",
+    "upUser": "zhenzhen",
+    "trade": [
+      {
+        "nameChi": "工人",
+        "nameEng": "worker",
+        "_id": "5b33bb112dc97e6f98f26181",
+        "id": "5b33bb112dc97e6f98f26181"
+      }
+    ],
+    "crTime": null,
+    "crUser": null,
+    "upTime": null,
+    "id": "5b174c95875790000e2ca658"
+  }
+]

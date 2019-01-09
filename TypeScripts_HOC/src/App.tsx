@@ -17,7 +17,7 @@ export interface Iprops {
 
 class App extends React.Component< Iprops > {
   public render() {
-    const { history } = this.props
+    const { history } = this.props;
     return (
       <ConnectedRouter history={ history }>
                 <Switch>
