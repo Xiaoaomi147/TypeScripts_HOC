@@ -1,8 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import ProviderUtility from './utilities/ProviderUtility';
-import IStore from './stores/IStore'
-// tslint:disable-next-line:ordered-imports
+import IStore from './stores/IStore';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import { createBrowserHistory, History } from 'history';

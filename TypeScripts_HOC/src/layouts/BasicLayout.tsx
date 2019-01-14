@@ -102,6 +102,7 @@ Collapse = () => {
                   <ul>
                     <li><Link to={RouteEnum.Login} onClick={this.loginOut}>登出</Link></li>
                     <li><Link to={RouteEnum.JSL}> HOOKS </Link></li>
+                    <li><Link to={RouteEnum.JSLL}> JSLL </Link></li>
                   </ul>
                 </div>
                 )

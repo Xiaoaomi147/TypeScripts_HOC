@@ -1,3 +1,5 @@
+const env = process.env;
+console.log(env);
 module.exports  = {
     port: process.env.PORT || 8888,
     session: {
@@ -9,5 +11,7 @@ module.exports  = {
         useNewUrlParser: true,
         user: 'test',
         pass: 'test',
-    }
+    },
+    tokenSecret: env.tokenSecret || 'test',
+    tokenExpiresIn: env.tokenExpiresIn || 3600,
 }
