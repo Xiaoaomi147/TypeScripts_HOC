@@ -3,14 +3,14 @@ const bodyParser = require('koa-bodyparser'); //koa2获取参数的方法
 const session = require('koa-session'); //提供session操作
 
 const mongoose = require('mongoose');
-
+const redis = require('./models/redis')
 const CONFIG = require('./config/config');
 
 const Routes =  require('./router/index');
 
 const app = new Koa();
-
-mongoose.connect( CONFIG.mongodb, CONFIG.options );  //连接数据库 地址和验证信息
+const mongoUrl = `mongodb://${CONFIG.mongoHost}:${CONFIG.mongoPort}/${CONFIG.mongoDatabase}`
+mongoose.connect( mongoUrl, CONFIG.options );  //连接数据库 地址和验证信息
 const db = mongoose.connection;
 db.once('open',()=>{
     console.log('数据库连接成功');
@@ -18,6 +18,8 @@ db.once('open',()=>{
 db.on('error',()=>{
     console.log('数据库连接失败');
 });
+
+redis;
 
 app.use(bodyParser());
 

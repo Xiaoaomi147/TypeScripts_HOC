@@ -19,7 +19,7 @@ module.exports = {
         try {
             const result = jwt.verify( token, secret )
             return result
-        } catch {
+        } catch (err){
             return false
         }
     },

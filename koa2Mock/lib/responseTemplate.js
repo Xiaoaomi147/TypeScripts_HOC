@@ -1,15 +1,12 @@
 module.exports = {
-    no : async (ctx,msg) => {
+    no : async ( ctx ) => {
         ctx.body = {
-            statusCode: 500,
-            Message: msg,
-            data: null
+            Message: "Failed",
         }
     },
-    ok : async ( ctx, Message, data ) => {
+    ok : async ( ctx, data ) => {
         ctx.body = {
-            statusCode: 200,
-            Message,
+            Message: "Success",
             data
         }
     }
