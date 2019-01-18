@@ -20,7 +20,7 @@ io.on('connection', socket => {
      })
 
      socket.on('gettime',( {timeout} = data )=>{
-     let d1 = Date.now();
+     let d1 = Date.now();7
 
      setTimeout(() => {
           socket.emit('emittime', { time: `${d1 - timeout}ms`, timeout: Date.now() })
