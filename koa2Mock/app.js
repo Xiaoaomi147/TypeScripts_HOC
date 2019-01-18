@@ -7,7 +7,7 @@ const redis = require('./models/redis')
 const CONFIG = require('./config/config');
 
 const Routes =  require('./router/index');
-
+const socket = require('./models/websocket');
 const app = new Koa();
 const mongoUrl = `mongodb://${CONFIG.mongoHost}:${CONFIG.mongoPort}/${CONFIG.mongoDatabase}`
 mongoose.connect( mongoUrl, CONFIG.options );  //连接数据库 地址和验证信息
@@ -16,10 +16,11 @@ db.once('open',()=>{
     console.log('数据库连接成功');
 });
 db.on('error',()=>{
-    console.log('数据库连接失败');
+    // console.log('数据库连接失败');
 });
 
 redis;
+socket;
 
 app.use(bodyParser());
 

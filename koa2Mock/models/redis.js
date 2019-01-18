@@ -8,7 +8,7 @@ const client = redis.createClient(Object.assign({}, auth, {
     port: CONFIG.redisPort
 }))
 client.on('error', function(err) {
-    console.log('Redis Error ' + err);
+    // console.log('Redis Error ' + err);
 })
 
 client.on('connect', function() {
