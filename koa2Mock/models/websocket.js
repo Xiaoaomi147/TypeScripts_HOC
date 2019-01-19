@@ -2,10 +2,10 @@ const Koa = require('koa');
 const app = new Koa();
 const server = require('http').Server(app.callback());
 const io = require('socket.io')(server);
-const port = 8082;
+const config = require('../config/config');
 
-server.listen(process.env.PORT || port, () => {
-     console.log(`app run at : http://127.0.0.1:${port}`);
+server.listen(config.port, () => {
+     console.log(`app run at : http://198.181.36.251:${port}`);
 })
 
 io.on('connection', socket => {

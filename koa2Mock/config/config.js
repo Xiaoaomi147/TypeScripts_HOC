@@ -1,6 +1,7 @@
 const env = process.env;
 module.exports  = {
     port: process.env.PORT || 8888,
+    websocket: process.env.PORT || 8082,
     session: {
         key: 'issfan.com',
         maxAge: 86400000
