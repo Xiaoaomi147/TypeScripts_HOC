@@ -15,17 +15,15 @@ io.on('connection', socket => {
           socket.emit('getMsg', '我是返回的消息... ...');
      })
      
+
      socket.on('werty',()=>{
           socket.emit('emittime', { time: '开始测速',timeout: Date.now() })
      })
-
-     socket.on('gettime',( {timeout} = data )=>{
-     let d1 = Date.now();7
-
-     setTimeout(() => {
-          socket.emit('emittime', { time: `${d1 - timeout}ms`, timeout: Date.now() })
-      }, 2000)
-
+     socket.on('gettime',( { timeout } = data )=>{
+          let d1 = Date.now();
+          setTimeout(() => {
+               socket.emit('emittime', { time: `${d1 - timeout}ms`, timeout: Date.now() })
+          }, 10000)
      })
      
 })

@@ -22,7 +22,6 @@ export default class Home extends React.Component< IProps, IState >{
         
         Socketss.emit('werty',  "" );
         Socketss.on('emittime',(data: any)=>{
-            // console.log(data)
             this.setState({data:data.time})
             Socketss.emit('gettime', data)
         })
